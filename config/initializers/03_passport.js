@@ -18,7 +18,7 @@ module.exports = function() {
             usernameField: 'email'
         },
         function(username, password, done) {
-            console.log('authing...')
+            console.log('\n\n\n\nauthing...')
             User.find({ where: { email: username } }).success(function(user) {
                 if (!user) {
                     return done(null, false, {

@@ -8,6 +8,6 @@ module.exports = function routes() {
 
   this.resource('account');
   this.get('/login', 'account#showLogin');
-  this.post('/login', passport.authenticate('local', { successRedirect: '/',
+  this.post('/login', passport.authenticate('local', { successRedirect: '/coco',
                                                        failureRedirect: '/login' }));
 }
