@@ -1,4 +1,5 @@
 var express = require('express'),
+    passport = require('passport'),
     poweredBy = require('connect-powered-by'),
     util = require('util');
 
@@ -42,5 +43,7 @@ module.exports = function() {
     this.use(express.static(__dirname + '/../../public'));
     this.use(express.bodyParser());
     this.use(express.methodOverride());
+    this.use(passport.initialize());
+    this.use(passport.session());
     this.use(this.router);
 }

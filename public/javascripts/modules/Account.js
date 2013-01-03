@@ -9,15 +9,13 @@ define(function() {
                 repassword: $(".form-signin").find('input.repassword').val()
             }
             
-            console.log(data)
-            
             if(data.password != data.repassword) {
                 alert("Passwords do not match");
                 return false;
             }
             
             $.post('/account', data, function(d) {
-                console.log(d);
+                location.href = "/";
             });
         });
     }

@@ -10,5 +10,16 @@ module.exports = function(sequelize, DataTypes) {
                 isEmail: true
             }
         }
+    }, 
+    {
+        instanceMethods: {
+            validPassword: function(password) {
+                console.log(this)
+                if (password == this.password) {
+                    return true;
+                }
+                return false;
+            }
+        }
     })
 }

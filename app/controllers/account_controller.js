@@ -1,6 +1,5 @@
 var locomotive = require('locomotive')
-  , Controller = locomotive.Controller
-  , models = require('../models');
+  , Controller = locomotive.Controller;
 
 var AccountController = new Controller();
 
@@ -19,14 +18,14 @@ AccountController.create = function() {
 
     var User = this.app.models.User;
 
-    // this.res.send(data)
-    
     User.create(data).success(function(user) {
         controller.res.send(user, 201)
     });
 };
 
-AccountController.login = function() {
+AccountController.showLogin = function() {
+    this.title = 'Please Sign in'
+    this.render('login');
 };
 
 module.exports = AccountController;
