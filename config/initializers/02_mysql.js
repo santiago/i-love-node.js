@@ -73,7 +73,6 @@ module.exports = function() {
         }
     });
     
-    var models = require('../../app/models');
-    models.User(sequelize);
-    models.School(sequelize);
+    var models = require('../../app/models')(sequelize);
+    this.models = models;
 }

@@ -16,12 +16,14 @@ AccountController.create = function() {
         password: this.param('password'),
         repassword: this.param('repassword')
     }
-    console.log(models.User)
-    this.res.send(data)
+
+    var User = this.app.models.User;
+
+    // this.res.send(data)
     
-    //models.User.create(data).success(function(user) {
-    //    controller.res.send(user, 201)
-    //});
+    User.create(data).success(function(user) {
+        controller.res.send(user, 201)
+    });
 };
 
 AccountController.login = function() {

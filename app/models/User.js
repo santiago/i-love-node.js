@@ -1,13 +1,11 @@
-var Sequelize = require('sequelize');
-
-module.exports = function(sequelize) {
-    sequelize.define('User', {
-        name: Sequelize.STRING,
-        username: Sequelize.STRING,
-        password: Sequelize.STRING,
-        active: Sequelize.BOOLEAN,
+module.exports = function(sequelize, DataTypes) {
+    return sequelize.define('User', {
+        name: DataTypes.STRING,
+        username: DataTypes.STRING,
+        password: DataTypes.STRING,
+        active: DataTypes.BOOLEAN,
         email: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             validate: {
                 isEmail: true
             }
