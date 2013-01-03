@@ -1,0 +1,20 @@
+{
+    "development": {
+        "username": "test",
+        "password": null,
+        "database": "test",
+        "host": "127.0.0.1"
+    },
+    "test": {
+        "username": "test",
+        "password": null,
+        "database": "test",
+        "host": "127.0.0.1"
+    },
+    "production": {
+        "username": "root",
+        "password": null,
+        "database": "database_production",
+        "host": "127.0.0.1"
+    }
+}
