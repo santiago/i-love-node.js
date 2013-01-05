@@ -14,7 +14,6 @@ module.exports = function(sequelize, DataTypes) {
     {
         instanceMethods: {
             validPassword: function(password) {
-                console.log(this)
                 if (password == this.password) {
                     return true;
                 }

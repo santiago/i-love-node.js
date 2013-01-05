@@ -18,7 +18,6 @@ module.exports = function() {
             usernameField: 'email'
         },
         function(username, password, done) {
-            console.log('\n\n\n\nauthing...')
             User.find({ where: { email: username } }).success(function(user) {
                 if (!user) {
                     return done(null, false, {
@@ -30,9 +29,11 @@ module.exports = function() {
                         message: 'Incorrect password.'
                     });
                 }
-                return done(null, user);
+                return done(null, user.selectedValues);
             }).error(function(err) {
                 return done(err);
             });
     }));
+    
+    this.passport = passport;
 }

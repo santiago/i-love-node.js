@@ -4,8 +4,8 @@ var locomotive = require('locomotive')
 var AccountController = new Controller();
 
 AccountController.new = function() {
-  this.title = 'Create new User'
-  this.render();
+    this.title = 'Create new User'
+    this.render();
 };
 
 AccountController.create = function() {

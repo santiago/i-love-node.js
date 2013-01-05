@@ -37,8 +37,8 @@ block content
  div(class="container")
    form(class="form-signin", action="/login", method="post")
      h2(class="form-signin-heading") Please sign in
-     input.email(type="text", class="input-block-level", placeholder="Email address")
-     input.password(type="password", class="input-block-level", placeholder="Password")
+     input.email(type="text", name="email", class="input-block-level", placeholder="Email address")
+     input.password(type="password", name="password", class="input-block-level", placeholder="Password")
      label(class="checkbox")
        input(type="checkbox", value="remember-me") 
        | Remember me
